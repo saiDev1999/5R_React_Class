@@ -17,6 +17,7 @@ import { Card } from "./components/card/card.js";
 const App = () => {
   return (
     <div class="app">
+      <h3>Hai 3:11pm code commit</h3>
       <Card></Card>
       <Card></Card>
       <Card></Card>
