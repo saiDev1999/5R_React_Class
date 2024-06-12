@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+Tasks:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Repeat the class
+2. Create form, tables
+3. How nesting of components can be done in react
+4. Go through landing page of react https://react.dev/
 
-## Available Scripts
+2013 open source
+react meta
+2018 major version -- funtional components for new components
 
-In the project directory, you can run:
+Components :
 
-### `npm start`
+Components are the independent reusable bits of code which creates part of User interface
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Examples of UI :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Button
+2. Image
+3. Heading (h1,...h6)
+4. Card
+5. Header
+6. Footer ...
+7. home screen
+8. about screen
 
-### `npm test`
+Components were created in the .js, .jsx, .tsx
+js - javascript
+jsx - javascript XML
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+tsx - typescript XML
 
-### `npm run build`
+note : In a file we can create as many components(.js we can many components)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Types of components :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+we have 2 types of components in react
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Funtional based component -> A component designed using plain js functions
+2. Class based components -> A component designed using classes in js
 
-### `npm run eject`
+Every component must start with the capital letter
+Every component can return the markup
+Component can be as small as a button or as large as a screen (page)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React is completely a component based approach
+will design the component , will reuse the component
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Example: I will create button component , i will the button component where ever the button appears
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ol - li
+ul - li
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Ordered list
 
-## Learn More
+1. apple
+2. banana
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Unordered list
+apple
+banana
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Component driven approach : Using this approach , we reuse the markup where ever needed
+Nesting of components, we will nest the components to form th final UI
