@@ -1,6 +1,7 @@
-export const Heading1 = () => {
+const Heading1 = () => {
   return <h1>Hello world h1</h1>;
 };
+export default Heading1;
 
 export const Heading2 = () => {
   return <h2>Hello world h2</h2>;

@@ -1,5 +1,5 @@
 import { ImageComponent } from "../image/imageComponent";
-import { Heading1 } from "../heading/headings";
+import Heading1 from "../heading/headings";
 import ButtonComponent from "../button/button";
 import { ListParentOrdered } from "../list/listParent";
 

@@ -1,40 +1,33 @@
-Topics :
+Topics
 
-1. Git Commands
-2. Git cloning
-3. Git sync
-4. JSX in react
-5. JSX rules in react
+1. Conditional rendering in react
+2. Exporting and importing of components
+3. Usage of map , nested map , and filter to show UI in react
 
 Tasks:
 
 1. Repeat the class
-2. Git initialize in your locals , clone my code
-3. complete yesterday tasks
-4. Take the list in the array , use map to iterate the UI
+2. Show the all ipl teams in the User interface (display all the data in details)
+3. Read first 4 articles from react.dev web site (describing the UI)
+4. Can we write React code without JSX ? (Research)
 
-JSX :
+Conditional rendering in react :
 
-Every component returns the markup(HTML)
+Conditional rendering refers to what we need to show in the UI, based on the condition we will display UI
 
-React
+3 ways for Conditional rendering:
 
-JSX :
-Javascript and xml , This is the special syntax that react will follow , it looks like a html but its not
-This synxtax allows us to write the html inside our javascript file
+1. if/else
+2. ternary operator - condition ? expression1 : expression2
+3. logical AND operator (short circuit operator) && (handles only the true case)
 
-Using this i can write both html and javascript in a single file
-Every component can returns the JSX(HTML+JS)
-Only react will allows this type of syntax
+exports :
+General we use 2 ways to export the funtions/ components /variables
 
-Rules of JSX :
+1. Default exports (one component in a file, we can export default)
+   while importing the default exports we dont require curly braces
 
-1. Every component must return a single parent (which is a shared container) or else we can also use React fragments
+2. Named exports - we can have as many exports in a file
+   while importing the named exports we require curly braces
 
-2. Every attribute must be in camelCase ex: onClick, onMouseOver, onSubmit
-
-3. html class must be replaced with className
-
-class is a predefined keywoord in react for creating class based components - className
-
-4. Every js code inside the return must written inside the curly braces
+A file can consits of as many exports out of those , we can only export default one time
