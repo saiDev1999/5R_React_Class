@@ -15,13 +15,15 @@ import {
 import { Card } from "./components/card/card.js";
 
 const App = () => {
+  const greeting = "Good morning ram";
   return (
-    <div class="app">
+    <>
       <h3>Hai 3:11pm code commit</h3>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-    </div>
+      <h3>{greeting}</h3>
+      {[1].map((num, index) => (
+        <Card key={index}></Card>
+      ))}
+    </>
   );
 };
 
