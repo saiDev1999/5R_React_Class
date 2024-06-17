@@ -2,6 +2,9 @@ import React from "react";
 import { Card } from "./components/card/card.js";
 import { ImageComponent } from "./components/image/imageComponent.js";
 import { ListParentOrdered } from "./components/list/listParent.js";
+import "./index.css";
+import ButtonComponent from "./components/button/button.js";
+// import ButtonComponent from "./components/button/button.js";
 
 const App = () => {
   const isLogin = true;
@@ -35,9 +38,10 @@ const App = () => {
       {isLogin && (
         <React.Fragment>
           <h3>Wellcome user good afternoon</h3>
-          <ListParentOrdered />
+          {/* <ListParentOrdered /> */}
           {/* <ImageComponent />
           <Card /> */}
+          <ButtonComponent />
         </React.Fragment>
       )}
     </div>

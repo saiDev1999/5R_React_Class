@@ -1,33 +1,33 @@
-Topics
+Topics :
 
-1. Conditional rendering in react
-2. Exporting and importing of components
-3. Usage of map , nested map , and filter to show UI in react
+1. Ways to style react app
+2. Inline styling
+3. External styling
+4. Module styling
 
 Tasks:
 
-1. Repeat the class
-2. Show the all ipl teams in the User interface (display all the data in details)
-3. Read first 4 articles from react.dev web site (describing the UI)
-4. Can we write React code without JSX ? (Research)
+1. Card styling
+2. Implement in the ipl teams
+3. implement the circle , square , rectangle , and line components
+4. map, filter and reduce use cases in react (discussed in class)
 
-Conditional rendering in react :
+4 different ways to style react app:
 
-Conditional rendering refers to what we need to show in the UI, based on the condition we will display UI
+1. Inline styling or object styling
+   rule: camelCase styling
+   backgroundColor
 
-3 ways for Conditional rendering:
+2. external styling (.css)
 
-1. if/else
-2. ternary operator - condition ? expression1 : expression2
-3. logical AND operator (short circuit operator) && (handles only the true case)
+3. external module css (.module.css)
+4. Stylesheet styling or external css frameworks styling Sass styling
 
-exports :
-General we use 2 ways to export the funtions/ components /variables
+Css frameworks :
 
-1. Default exports (one component in a file, we can export default)
-   while importing the default exports we dont require curly braces
-
-2. Named exports - we can have as many exports in a file
-   while importing the named exports we require curly braces
-
-A file can consits of as many exports out of those , we can only export default one time
+1. Bootstrap
+2. Tailwind css
+3. material UI
+4. Chakra UI
+5. Ant design
+6. style sheets etc
