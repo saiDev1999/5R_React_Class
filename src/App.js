@@ -28,8 +28,18 @@ const App = () => {
   // }
   return (
     <div>
-      <CustomProgressBar />
-      <FirstComponent />
+      <ImageComponent
+        src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+        width="100"
+        height="100"
+        alt="shirt"
+      />
+      <ImageComponent
+        src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+        width="100"
+        height="100"
+        alt="shirt"
+      />
     </div>
   );
 };
