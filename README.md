@@ -22,3 +22,20 @@ There are 2 ways for the props
 general prop :
 
 <ImageComponent  src="path"  width="" height=""  alt="">
+
+children
+</ImageComponent>
+
+<Button   text="" backgroundColor="" height=""  width= "" textColor="" >
+
+<>
+
+children prop
+
+1. Using children prop we can nest the components
+2. To receive the children prop we must use children keyword
+
+React Fragments:
+
+1. <></>
+2. <React.Fragments></React.Fragments>

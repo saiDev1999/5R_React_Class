@@ -7,6 +7,10 @@ import ButtonComponent from "./components/button/button.js";
 import FirstComponent from "./components/boostrap/first-component.js";
 import CustomAccordion from "./components/accordion/accordion.js";
 import CustomProgressBar from "./components/progress-bar/progress-bar.js";
+import { fakeData } from "./javascript/data.js";
+import Heading1, { Heading3, Heading6 } from "./components/heading/headings.js";
+import CustomList from "./components/list/customList.js";
+import { recipeData } from "./javascript/recipeData.js";
 // import ButtonComponent from "./components/button/button.js";
 
 const App = () => {
@@ -28,18 +32,48 @@ const App = () => {
   // }
   return (
     <div>
-      <ImageComponent
-        src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
-        width="100"
-        height="100"
-        alt="shirt"
+      {/* <ButtonComponent
+        text="Login"
+        bgColor="red"
+        height={100}
+        width={100}
+        onPress={() => {}}
       />
-      <ImageComponent
-        src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
-        width="100"
-        height="100"
-        alt="shirt"
-      />
+
+      <ButtonComponent
+        text="Signup"
+        bgColor="green"
+        height={100}
+        width={50}
+        onPress={() => {}}
+      /> */}
+
+      {recipeData.map((eachRecipe, index) => {
+        const {
+          name: dishName,
+          image,
+          ingredients,
+          instructions,
+          id,
+        } = eachRecipe;
+        return (
+          <React.Fragment key={id}>
+            <Heading1 title={`${id} ${dishName}`} />
+            <ImageComponent
+              src={image}
+              width={100}
+              height={100}
+              alt={dishName}
+            />
+
+            <Heading1 title={"Ingredients to prepare"} />
+            <CustomList list={ingredients} />
+
+            <Heading1 title={"Instructions to prepare"} />
+            <CustomList list={instructions} />
+          </React.Fragment>
+        );
+      })}
     </div>
   );
 };
