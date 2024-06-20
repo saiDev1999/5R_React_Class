@@ -8,7 +8,6 @@ const ButtonComponent = (prop) => {
   return (
     <button
       onClick={onPress}
-      className={styles.buttonCss}
       style={{ backgroundColor: bgColor, width: width, height: height }}
     >
       {text}

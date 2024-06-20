@@ -1,41 +1,69 @@
-Website
+1. functional
+2. class -> 2013-2018
 
-1. static -> UI
-2. dynamic -> Funtion
+Babel : Babel is transpiler which transpiles JSX code to js code or browser understandable code
 
-React props and state
+class component :
 
-Props :
+1. render method : render is a required method in class components to insert JSX in dom
 
-1. Additional information given to the components
-2. For Component we can have as many custom props
-3. Props are user defined
-4. Using Props we can communicate from parent to child (data forward from parent to child)
-5. Props are immutable(we cannot change over the time)
-6. Prop is an object which holds the data
+State and props:
 
-There are 2 ways for the props
+State : State is an object which holds the information or data of a particular component
+State can make dynamic websites
+State is private to a component
+State is mutable
+To access the state in react class components , we need to use this keyword
 
-1. general prop
-2. children prop
+There are 2 ways to create state in react class based components
 
-general prop :
+1. object way of creation
+2. constructor way of creation
 
-<ImageComponent  src="path"  width="" height=""  alt="">
+To change the state we must use setState method
+whenever we are using setState method , component will re-render to show updated layout
+state changes are asynchronous
 
-children
-</ImageComponent>
+wrong usage of a state
+let a = 20
+a=30
 
-<Button   text="" backgroundColor="" height=""  width= "" textColor="" >
+using state concepts
 
-<>
+ex: Youtube button
+data : subscribe, subscribed
+initialState : subscribe
+Event : onClick
+finalState: subscribed
 
-children prop
+Events :
+To attach the method in class components , i need to use this.methodName
+onClick={this.methodName}
 
-1. Using children prop we can nest the components
-2. To receive the children prop we must use children keyword
+activity :
 
-React Fragments:
+1. Shop A , Shop B
 
-1. <></>
-2. <React.Fragments></React.Fragments>
+1. 1000
+1. 600
+1. 900
+
+1. 500
+
+CRUD: Create the data, Read the data, Update the data , Delete the delete
+
+Tasks:
+
+1. Repeat the class
+2. List of employess -> each employee salary , 3 buttons , <1000,1000-20000,>20000,All
+3. State check in react.dev
+4. Uplifting of state in react
+5. What is the prop drilling
+
+Topics:
+
+1. Class components in react
+2. State in react
+3. Setstate in react class
+4. Youtube button
+5. Todo in react
