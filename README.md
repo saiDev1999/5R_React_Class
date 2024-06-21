@@ -1,69 +1,62 @@
-1. functional
-2. class -> 2013-2018
+API : Application programming interface
 
-Babel : Babel is transpiler which transpiles JSX code to js code or browser understandable code
+instagram :
 
-class component :
+methods : get, post, delete, put
 
-1. render method : render is a required method in class components to insert JSX in dom
+get api call (server to client)
+post call (client to server)
+delete (client to server)
+put (client to server)
 
-State and props:
+fetch : fetch is used to happen https calls in client
+fetch return promise
 
-State : State is an object which holds the information or data of a particular component
-State can make dynamic websites
-State is private to a component
-State is mutable
-To access the state in react class components , we need to use this keyword
+Fetching data in the react application on page load :
 
-There are 2 ways to create state in react class based components
+ways for fetching data in react app :
 
-1. object way of creation
-2. constructor way of creation
+1. fetch
+2. axios
+3. swr
+4. react query
 
-To change the state we must use setState method
-whenever we are using setState method , component will re-render to show updated layout
-state changes are asynchronous
+fetch(URL).then().catch()
 
-wrong usage of a state
-let a = 20
-a=30
+componentDidMount : This method is used to cause the side effects with in the class component
 
-using state concepts
+side effects : api calls(https calls), Dom manipulations, Event listeners, Timers
 
-ex: Youtube button
-data : subscribe, subscribed
-initialState : subscribe
-Event : onClick
-finalState: subscribed
+componentsDidMount is self invoked method
 
-Events :
-To attach the method in class components , i need to use this.methodName
-onClick={this.methodName}
+componentDidMount runs only once in a lifecycle
 
-activity :
+componentDidMount will invoke after the render method
 
-1. Shop A , Shop B
+fetch and axios difference :
 
-1. 1000
-1. 600
-1. 900
+1. fetch doesn't convert to json , we need to do it manually
+2. fetch doesn't provide status codes
+3. fetch is provided by browser web api
+4. fetch doesn't intercept the response and request
 
-1. 500
-
-CRUD: Create the data, Read the data, Update the data , Delete the delete
+5. axios converts to json automatically
+6. we will get the status codes, based on the status codes , we will show the user interface
+7. axios is a third party library
+8. axios supports intercept the response and request
 
 Tasks:
 
 1. Repeat the class
-2. List of employess -> each employee salary , 3 buttons , <1000,1000-20000,>20000,All
-3. State check in react.dev
-4. Uplifting of state in react
-5. What is the prop drilling
+2. fetch , axios , fetch with then, axios with .then, fetch with async and await ,axios with async and await
+3. show the recipe data in UI (https://dummyjson.com/recipes)
+4. fetch and axios difference
+5. limitations of react
 
-Topics:
+Topics :
 
-1. Class components in react
-2. State in react
-3. Setstate in react class
-4. Youtube button
-5. Todo in react
+1. Fetching the data
+2. using fetch
+3. using axios
+4. async await and .then versions
+5. try catch loader, success, and error state handling

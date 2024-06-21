@@ -5,6 +5,7 @@ import { ListParentOrdered } from "./components/list/listParent.js";
 import "./index.css";
 import ButtonComponentClass from "./components/class-components/button.js";
 import TodoComponent from "./components/class-components/todo/todo.js";
+import ProductListing from "./components/class-components/productListing/productListing.js";
 
 const App = () => {
   const isLogin = true;
@@ -12,7 +13,8 @@ const App = () => {
   return (
     <div>
       {/* <ButtonComponentClass /> */}
-      <TodoComponent />
+      {/* <TodoComponent /> */}
+      <ProductListing />
     </div>
   );
 };
