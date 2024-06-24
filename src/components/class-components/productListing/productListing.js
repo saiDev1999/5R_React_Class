@@ -4,15 +4,31 @@ import CustomSpinner from "../../customSpinner/customSpinner";
 const { Component } = require("react");
 
 class ProductListing extends Component {
-  state = {
-    productListing: [],
-    loading: false,
-    error: null,
-  };
+  // state = {
+  //   productListing: [],
+  //   loading: false,
+  //   error: null,
+  //   additional: {
+  //     one: "one",
+  //   },
+  // };
+
+  constructor() {
+    super();
+    this.state = {
+      productListing: [],
+      loading: false,
+      error: null,
+      additional: {
+        one: "one",
+      },
+    };
+  }
 
   componentDidMount() {
     console.log("componentDidMount invoked...");
-    this.fetchData();
+    document.title = "my project";
+    // this.fetchData();
   }
 
   //   fetchData = () => {
@@ -80,19 +96,24 @@ class ProductListing extends Component {
   };
 
   render() {
+    const {
+      loading,
+      productListing,
+      additional: { one },
+    } = this.state;
     console.log("render invoked...");
     return (
       <>
         <h3>Product Listing page</h3>
 
-        {this.state.loading ? (
+        {loading ? (
           <>
             <h3>Please wait ....</h3>
             <CustomSpinner />
           </>
         ) : (
           <div>
-            {this.state.productListing.map((eachObject) => {
+            {productListing.map((eachObject) => {
               return <h3 key={eachObject.id}>{eachObject.title}</h3>;
             })}
           </div>
