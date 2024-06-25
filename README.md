@@ -1,3 +1,20 @@
+Problem : I need to implement the circles based on the user events on the button
+
+Steps:
+
+1. Generate the circle , create a circle
+2. Add the button for circle addition, for every event push the tru flag to the array
+
+Composition in react : Components is responsible for performing specific UI and functuality tasks, Every component will be nested to get the final UI , This nested of components to form final UI , we call it as the Composition in react
+
+Problem : Evry component re-renders when parent component re-renders, which slows the application performance
+
+Solution : Child has to re-render only when child state or prop changes
+
+Pure component : Pure component helps us to skip the unnecassary renders of the components
+it makes component to update only when state or prop
+Internally pure component having the shouldComponentUpdate life cycle
+
 Topics:
 
 1. Lifecycle method in react class components
@@ -53,8 +70,14 @@ side effects : data fetching , timers , event listeners, dom manipulations
 2.4 shouldComponentUpdate
 2.5 getSnapShotBeforeUpdate
 
-3. UnMounting stage or phase
-1. componentWillUnmount
+3. UnMounting stage or phase :
+
+whenever component or elemens removed from dom , this phase we can call it as unMounting
+
+1. componentWillUnmount : This method is used to perform the clean up tasks for the component
+
+This method is used to prevent the memory leaks in the applications
+memory leaks like un-stopped timer , remove event listeners , This method makes the app performace to increase
 
 DOM : Drawbacks :
 
