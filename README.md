@@ -1,3 +1,10 @@
+Topics:
+
+1. Unmounting phase
+2. pure components
+3. Composition in react
+4. difference between funtional components and class components
+
 Problem : I need to implement the circles based on the user events on the button
 
 Steps:
