@@ -8,6 +8,7 @@ const UseStateExample = () => {
     switch (type) {
       case "INCREMENT":
         setCount((count) => count + scale);
+
         break;
       case "DECREMENT":
         if (count > 0) {

@@ -13,6 +13,7 @@ import ParentComponent from "./components/class-components/purecomponents/parent
 import CircleComponent from "./components/class-components/circleTask/circles.js";
 import UseStateExample from "./components/funtionalHooks/useState/useStateEx.js";
 import TodoComponent from "./components/funtionalHooks/useState/todo.js";
+import Form from "./components/forms/uncontrolled/form.js";
 
 const App = () => {
   const isLogin = true;
@@ -39,7 +40,9 @@ const App = () => {
       {/* <ParentComponent /> */}
       {/* <CircleComponent /> */}
       {/* <UseStateExample /> */}
-      <TodoComponent />
+
+      {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
+      <Form />
     </div>
   );
 };
