@@ -14,6 +14,7 @@ import CircleComponent from "./components/class-components/circleTask/circles.js
 import UseStateExample from "./components/funtionalHooks/useState/useStateEx.js";
 import TodoComponent from "./components/funtionalHooks/useState/todo.js";
 import Form from "./components/forms/uncontrolled/form.js";
+import ControlledForm from "./components/forms/controlled/controlled.js";
 
 const App = () => {
   const isLogin = true;
@@ -42,7 +43,8 @@ const App = () => {
       {/* <UseStateExample /> */}
 
       {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
-      <Form />
+      {/* <Form /> */}
+      <ControlledForm />
     </div>
   );
 };
