@@ -1,13 +1,16 @@
-export const Heading1 = () => {
-  return <h1>Hello world h1</h1>;
+const Heading1 = (prop) => {
+  const { title } = prop;
+  return <h1>{title}</h1>;
 };
+export default Heading1;
 
 export const Heading2 = () => {
   return <h2>Hello world h2</h2>;
 };
 
-export const Heading3 = () => {
-  return <h3>Hello world h3</h3>;
+export const Heading3 = (prop) => {
+  const { title } = prop;
+  return <h3>{title}</h3>;
 };
 
 export const Heading4 = () => {
@@ -18,6 +21,8 @@ export const Heading5 = () => {
   return <h5>Hello world h5</h5>;
 };
 
-export const Heading6 = () => {
-  return <h6>Hello world h6</h6>;
+export const Heading6 = (prop) => {
+  console.log(prop, "props");
+  const { children } = prop;
+  return <>{children}</>;
 };

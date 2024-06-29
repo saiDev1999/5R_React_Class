@@ -1,40 +1,34 @@
-Topics :
+controlled components :
 
-1. Git Commands
-2. Git cloning
-3. Git sync
-4. JSX in react
-5. JSX rules in react
+steps :
+
+1. Implement the forms in the component using jsx syntax
+2. Take the state for the inputs (inividual states or single state)
+3. Attach the states to the input tag using value attribute
+4. For field validations, we will add onChange attribute for each inputs
+   (onChange will accept the function where we can track the input events)
+5. Within the function, To collect the values from input we use event.target.value
+
+6. Validate the user,
+   if validation fails - Invalid creds
+   else validation passes - Valid creds , submit the form
+
+7. We will post the data to the server using post api call
+
+8. if user exists , allow the user (details of user) , invalid creds
 
 Tasks:
 
 1. Repeat the class
-2. Git initialize in your locals , clone my code
-3. complete yesterday tasks
-4. Take the list in the array , use map to iterate the UI
+2. Show the user name and password in the table , also check user exists in the data base or not
+   https://dummyjson.com/users
+3. Authorization and Authenication
+4. Register form using controlled components
+5. difference between controlled and un controlled components
 
-JSX :
+Topics:
 
-Every component returns the markup(HTML)
-
-React
-
-JSX :
-Javascript and xml , This is the special syntax that react will follow , it looks like a html but its not
-This synxtax allows us to write the html inside our javascript file
-
-Using this i can write both html and javascript in a single file
-Every component can returns the JSX(HTML+JS)
-Only react will allows this type of syntax
-
-Rules of JSX :
-
-1. Every component must return a single parent (which is a shared container) or else we can also use React fragments
-
-2. Every attribute must be in camelCase ex: onClick, onMouseOver, onSubmit
-
-3. html class must be replaced with className
-
-class is a predefined keywoord in react for creating class based components - className
-
-4. Every js code inside the return must written inside the curly braces
+1. Controlled components
+2. Field validations
+   3, Login api implementation
+3. Error handling in react
