@@ -6,7 +6,7 @@ import "./index.css";
 import ButtonComponentClass from "./components/class-components/button.js";
 
 import ProductListing from "./components/class-components/productListing/productListing.js";
-import Greeting from "./components/greeting/greeting.js";
+
 import MountingPhase from "./components/class-components/mounting/mounting.js";
 import Unmounting from "./components/class-components/unmounting/unMounting.js";
 import ParentComponent from "./components/class-components/purecomponents/parent.js";
@@ -15,6 +15,7 @@ import UseStateExample from "./components/funtionalHooks/useState/useStateEx.js"
 import TodoComponent from "./components/funtionalHooks/useState/todo.js";
 import Form from "./components/forms/uncontrolled/form.js";
 import ControlledForm from "./components/forms/controlled/controlled.js";
+import { Greeting } from "./components/heading/headings.js";
 
 const App = () => {
   const isLogin = true;
@@ -34,6 +35,7 @@ const App = () => {
 
   const names = ["kiran", "sathvik", "mounika", "sashi", "ramya"];
   const greeting = ["Woke up at 7am", "breakfast at 9am", "class at 10am"];
+  console.log("greeting: ", greeting);
 
   return (
     <div>
@@ -44,7 +46,15 @@ const App = () => {
 
       {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
       {/* <Form /> */}
-      <ControlledForm />
+      <Greeting>
+        <h4>Good morning 5R </h4>
+        <h4> 5R doing good in react js </h4>
+      </Greeting>
+
+      <Greeting>
+        <h4>Good morning 6R </h4>
+        <h4> 6R needs to improve in react js </h4>
+      </Greeting>
     </div>
   );
 };

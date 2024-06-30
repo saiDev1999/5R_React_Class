@@ -26,3 +26,15 @@ export const Heading6 = (prop) => {
   const { children } = prop;
   return <>{children}</>;
 };
+
+export const Greeting = (prop) => {
+  const { children } = prop;
+
+  return (
+    <>
+      <h5>How are you all ?</h5>
+      {children}
+      <h3>tomorrow is a holiday due to ramzan</h3>
+    </>
+  );
+};
