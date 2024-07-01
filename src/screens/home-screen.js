@@ -9,7 +9,7 @@ function HomeScreen() {
       <Navbar />
       <h2>welcome to home screen</h2>
 
-      {[1, 2, 3, 4].map((each) => {
+      {[1, 2, 3, 4, 5].map((each) => {
         return (
           <Link to={`/hyderabad/${each}/info`}>
             <ButtonComponent text={each} />
