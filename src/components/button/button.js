@@ -4,7 +4,7 @@ import styles from "./button.module.css";
 const ButtonComponent = (prop) => {
   const buttonStyle = { color: "red", backgroundColor: "green" };
 
-  const { text, bgColor, onPress, height } = prop;
+  const { text = "button", bgColor, onPress, height } = prop;
   return (
     <button
       onClick={onPress}

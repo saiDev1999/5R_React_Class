@@ -18,6 +18,7 @@ import ControlledForm from "./components/forms/controlled/controlled.js";
 import { Greeting } from "./components/heading/headings.js";
 import Stack from "./navigation/stack.js";
 import CustomCorousel from "./components/corousel/corousel.js";
+import UserForm from "./components/forms/userForm.js";
 
 const App = () => {
   const list = [
@@ -34,10 +35,8 @@ const App = () => {
   ];
   return (
     <>
-      <CustomCorousel list={list} />
-      <CustomCorousel list={list} />
+      <UserForm />
     </>
-    /* <Stack /> */
   );
 };
 
