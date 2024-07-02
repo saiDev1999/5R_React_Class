@@ -17,12 +17,27 @@ import Form from "./components/forms/uncontrolled/form.js";
 import ControlledForm from "./components/forms/controlled/controlled.js";
 import { Greeting } from "./components/heading/headings.js";
 import Stack from "./navigation/stack.js";
+import CustomCorousel from "./components/corousel/corousel.js";
 
 const App = () => {
+  const list = [
+    {
+      name: "shirt",
+      text: "designed shirt",
+      url: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    },
+    {
+      name: "samsung",
+      text: "mobile",
+      url: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    },
+  ];
   return (
-    <div>
-      <Stack />
-    </div>
+    <>
+      <CustomCorousel list={list} />
+      <CustomCorousel list={list} />
+    </>
+    /* <Stack /> */
   );
 };
 
