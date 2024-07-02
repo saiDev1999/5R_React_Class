@@ -2,6 +2,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import CustomTable from "../tables/table";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function UserForm() {
   const [formData, setFormData] = useState({
@@ -34,10 +36,11 @@ function UserForm() {
     );
 
     if (isUserExists) {
-      alert("already exists");
+      notifyError("already exists");
     } else {
       setTableData([...tableData, userform]);
       setFormData({ username: "", password: "" });
+      notifySuccess("User added successfully");
     }
   };
 
@@ -46,11 +49,22 @@ function UserForm() {
     const filteredData = tableData.filter((value, ind) => ind != index);
 
     setTimeout(() => {
-      alert("record deleted success");
+      notifySuccess("User deleted successfully");
     }, 0);
     setTableData(filteredData);
   };
   const handleUpdate = (index) => {};
+  const notifyError = (errorMessage) => {
+    toast.error(errorMessage, {
+      position: "top-center",
+    });
+  };
+
+  const notifySuccess = (succesMessage) => {
+    toast.success(succesMessage, {
+      position: "top-center",
+    });
+  };
 
   return (
     <>
@@ -91,6 +105,7 @@ function UserForm() {
         handleDelete={handleDelete}
         handleUpdate={handleUpdate}
       />
+      <ToastContainer />
     </>
   );
 }
