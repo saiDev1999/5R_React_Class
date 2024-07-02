@@ -1,36 +1,35 @@
-ex: Navigations, data fetching
+1. Link : Link is used for navigation purpose (it doesn't provide active status)
+2. NavLink : active status will be provided
 
-create-react-app doesn't provide the navigations
+Nested navigations:
 
-Navigations(Routing) : We will depend on third party library called as React-Router-Dom
+Nested navigation refers to sub navigations with in the particular route
 
-React-Router-Dom allows react to provide internal application navigations,
+http://localhost:3000/contact/doctors --> List of doctors
 
-we dont use anchor tags for internal redirections (anchor tags doesn't have states linking way in react)
+engineers http://localhost:3000/contact/ --> List of engineers
 
-npm i react-router-dom
+<Outlet/>
 
-https://www.zomato.com/ - base URL
-investor-relations - path
+To give common sharable UI for the nested routes ,we can use Outlet component provided by the react-router-dom
 
-Navigations can be of 2 ways
+useParams : useParams is a hook provided by react-router-dom which collects the variable URL parameters
 
-1. Static navigations
-2. Dynamic navigations
+Lazy loading :
 
-https://www.zomato.com/ - base URL
-hyderabad/ - dynamic (location)
-lord-of-the-drinks-jubilee-hills/ - dynamic (id of the restaurant)
-info - static
+Initial load time of the application can be minimised using Lazy loading
 
-There are 2 ways for navigation in react router dom
+by default all the components will be loaded while opening the project
 
-1. Using Link component -> un protected
-2. using useNavigate hook in react-router-dom
+Lazy loading of a component can be done , when the component having the large data
+
+Topics :
+
+1.
 
 Tasks:
 
 1. Repeat the class
-2. Complete the login and registration navigations along with local storage
-3. Take the input accept the number , based on the number generate the buttons , redirect to details page
-4. Protected and unprotected routes
+2. Check the protected routes in react
+3. Design the home screen UI (fetch data by using button)
+4. Corousel component in react (Home screen)
