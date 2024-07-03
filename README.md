@@ -1,35 +1,57 @@
-1. Link : Link is used for navigation purpose (it doesn't provide active status)
-2. NavLink : active status will be provided
+useEffect :
 
-Nested navigations:
+useEffect is a hook in react functional components, It causes the side effects in the components
 
-Nested navigation refers to sub navigations with in the particular route
+side effects: Data fetching , Dom manipulations, Timers, Event listeners
 
-http://localhost:3000/contact/doctors --> List of doctors
+useEffect is replica of 3 methods
 
-engineers http://localhost:3000/contact/ --> List of engineers
+1. ComponentDidMount
+2. ComponentDidUpdate
+3. ComponentWillUnmount
 
-<Outlet/>
+syntax: useEffect will accept 2 args
 
-To give common sharable UI for the nested routes ,we can use Outlet component provided by the react-router-dom
+1. callback function
+2. array (dependency array)
 
-useParams : useParams is a hook provided by react-router-dom which collects the variable URL parameters
+useEffect(()=>{
+// side effects trigerring
+},[])
 
-Lazy loading :
+note : Based on the dependency array, behaviour of useEffect will changes
 
-Initial load time of the application can be minimised using Lazy loading
+case 1 : empty dependency array - componentDidMount
+useEffect(()=>{
+// side effects trigerring
+},[])
 
-by default all the components will be loaded while opening the project
+case 2 : array with some values or variables - ComponentDidUpdate
+useEffect(()=>{
+// side effects trigerring
+},[variable1,variable2,variable3...])
 
-Lazy loading of a component can be done , when the component having the large data
+note : when variables changes useEffect will be trigger
 
-Topics :
+case 3 : Remove dependency array
+useEffect(()=>{})
+when dependency array removed , component will gets re-render evreytime when state or prop changes , it can also leads to infinite render
 
-1.
+case 4 : callback function returns the another function - ComponentWillUnmount
+
+useEffect(()=>{
+
+    //side effects
+
+return ()=>{
+// clean up tasks
+// prevents the memory leakages
+}
+},[])
 
 Tasks:
 
 1. Repeat the class
-2. Check the protected routes in react
-3. Design the home screen UI (fetch data by using button)
-4. Corousel component in react (Home screen)
+2. Redirect to product details screen (Hit the product detail api and show in UI)
+3. Timer in react (funtional components)
+4. Hit the recipe api , show in table

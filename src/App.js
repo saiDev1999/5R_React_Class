@@ -36,8 +36,7 @@ const App = () => {
   ];
   return (
     <>
-      <UserForm />
-      {/* <CustomToasts /> */}
+      <Stack />
     </>
   );
 };
