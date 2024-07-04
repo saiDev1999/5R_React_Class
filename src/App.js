@@ -20,6 +20,9 @@ import Stack from "./navigation/stack.js";
 import CustomCorousel from "./components/corousel/corousel.js";
 import UserForm from "./components/forms/userForm.js";
 import CustomToasts from "./components/toasts/toasts.js";
+import RecipeTable from "./components/tables/recipeTable.js";
+import RecipeList from "./components/tables/recipeListing.js";
+import DigitalClock from "./components/digitalClock/digitalClock.js";
 
 const App = () => {
   const list = [
@@ -36,7 +39,8 @@ const App = () => {
   ];
   return (
     <>
-      <Stack />
+      <DigitalClock />
+      <RecipeList />
     </>
   );
 };
