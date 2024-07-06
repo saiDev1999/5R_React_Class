@@ -6,22 +6,45 @@ import { ImageComponent } from "../image/imageComponent";
 
 function RecipeList() {
   const [data, setData] = useState([]);
+  const [query, setQuery] = useState("");
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
-    fetchData();
+    fetchData(); // Initial data fetch without query
   }, []);
 
-  const fetchData = async () => {
-    const response = await axios.get("https://dummyjson.com/recipes");
+  useEffect(() => {
+    if (query) {
+      fetchData(query); // Fetch data with search query
+    }
+  }, [query]);
+
+  const fetchData = async (query = "") => {
+    setLoading(true);
+    const url = query
+      ? `https://dummyjson.com/recipes/search?q=${query}`
+      : "https://dummyjson.com/recipes";
+    const response = await axios.get(url);
     if (response.status === 200) {
       const recipeList = response.data.recipes;
       setData(recipeList);
-
-      console.log(recipeList);
     }
+    setLoading(false);
   };
+
+  const handleInputChange = (event) => {
+    setQuery(event.target.value);
+  };
+
   return (
     <div>
-      {data.length > 0 ? <RecipeTable data={data} /> : <CustomSpinner />}
+      <input
+        type="text"
+        placeholder="Search for a recipe"
+        value={query}
+        onChange={handleInputChange}
+      />
+      {loading ? <CustomSpinner /> : <RecipeTable data={data} />}
     </div>
   );
 }

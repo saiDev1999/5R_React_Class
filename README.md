@@ -1,3 +1,10 @@
+Tasks:
+
+1. Weather api (based on the city)(Bootstarp UI)
+2. Color picker component in react js
+3. Date component (05 July 2024)
+4. Search recipe list
+
 useEffect :
 
 useEffect is a hook in react functional components, It causes the side effects in the components
