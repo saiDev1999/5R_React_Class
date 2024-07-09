@@ -1,64 +1,50 @@
-Tasks:
+State management :
+Managing the data with in the application
 
-1. Weather api (based on the city)(Bootstarp UI)
-2. Color picker component in react js
-3. Date component (05 July 2024)
-4. Search recipe list
+There are 2 ways to manange state in react applications
 
-useEffect :
+1. Local state management -> useState
+2. Global state management
+   2.1 for Global state management we have 3 ways
+3. Props
+   Prop drilling : Prop drilling is situation where data needs to be used in destinated components , i need to disturb every level of the component structure
 
-useEffect is a hook in react functional components, It causes the side effects in the components
+Drawbacks:
 
-side effects: Data fetching , Dom manipulations, Timers, Event listeners
+1. Code readability and maintenence will be downgraded
+2. Every component will get disturbed to forward to final level
+3. Performance Overhead
+4. Decreased Component Reusability
+5. Increased Development Time
 
-useEffect is replica of 3 methods
+6. Context API
 
-1. ComponentDidMount
-2. ComponentDidUpdate
-3. ComponentWillUnmount
+Context api is used for global state management ,
+it allows us to manage the data with in react application by avoiding prop drilling
+Context api is inbuilt concept in react
 
-syntax: useEffect will accept 2 args
+steps for creating context in react funtional components
 
-1. callback function
-2. array (dependency array)
+1. Identify the components that we need to share the data
+2. Identify the data that needs to be shared
+3. Create a context using createContext method for identified components
+4. Wrap the context using provider , and pass value prop and assign the data that needs to be shared
+5. Identify the destination components (where we need to use) , and use useContext hook provided by the react, and pass created context variable as a argument for useContext hook
 
-useEffect(()=>{
-// side effects trigerring
-},[])
+6. Redux
 
-note : Based on the dependency array, behaviour of useEffect will changes
-
-case 1 : empty dependency array - componentDidMount
-useEffect(()=>{
-// side effects trigerring
-},[])
-
-case 2 : array with some values or variables - ComponentDidUpdate
-useEffect(()=>{
-// side effects trigerring
-},[variable1,variable2,variable3...])
-
-note : when variables changes useEffect will be trigger
-
-case 3 : Remove dependency array
-useEffect(()=>{})
-when dependency array removed , component will gets re-render evreytime when state or prop changes , it can also leads to infinite render
-
-case 4 : callback function returns the another function - ComponentWillUnmount
-
-useEffect(()=>{
-
-    //side effects
-
-return ()=>{
-// clean up tasks
-// prevents the memory leakages
-}
-},[])
-
-Tasks:
+Tasks :
 
 1. Repeat the class
-2. Redirect to product details screen (Hit the product detail api and show in UI)
-3. Timer in react (funtional components)
-4. Hit the recipe api , show in table
+2. Difference between local state management and Global state Management
+3. Why we need avoid prop drilling , when to pass as a props
+4. give user input in the settig screen , change globally using context
+5. difference between context api , prop drilling (adv of context api)
+
+Topics :
+
+1. Global state management
+2. Prop drilling
+3. Context api
+4. useContext hook
+5. Global counter using useState + useContext hooks

@@ -39,8 +39,7 @@ const App = () => {
   ];
   return (
     <>
-      <DigitalClock />
-      <RecipeList />
+      <Stack />
     </>
   );
 };
