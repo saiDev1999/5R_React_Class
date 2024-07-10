@@ -7,6 +7,8 @@ import UseEffectExample from "../components/useEffect/useEffectEx1";
 import UseEffectExample2 from "../components/useEffect/useEffectEx2";
 import UseEffectEx3 from "../components/useEffect/useEffectEx3";
 import { ProfileWrapper } from "../navigation/stack";
+import UseReducer from "../components/useReducer/useReducer";
+import UseReducerEx2 from "../components/useReducer/useReducerEx2";
 
 function HomeScreen() {
   const sharedData = useContext(ProfileWrapper);
@@ -14,6 +16,7 @@ function HomeScreen() {
   return (
     <div>
       <Navbar />
+      <UseReducerEx2 />
       <h2>
         welcome to home screen {sharedData.profileInfo.name}{" "}
         {sharedData.profileInfo.salary}
