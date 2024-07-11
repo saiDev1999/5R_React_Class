@@ -1,64 +1,32 @@
-useReducer hook in react :
+HOC:
+A higher-order component (HOC) in React is an advanced technique for reusing component logic.
+HOCs are functions that take a component and return a new component.
+They can be used to add additional functionality or props to the wrapped component.
 
-1. useReducer hook is similar to useState hook in react functional components , the only difference is useReducer is used to manipulate the complex states
-
-2. complex logics for our complex states
-
-useReducer will accepts 2 args
-
-1. state (initial state)
-2. reducer function
-
-(initial state) ---> {
-name:"hello",
-todo:["learn english","learn social"]
+const HocComponent =(WrappedComponent)=>{
+return ()=>{
+return <WrappedComponent name="hello ram"   />
 }
 
-useReducer will return an array which contains the currentState and dispatch function
-
-const [currentState,dispatchFuntion]=useReducer(reducerFunction,state)
-
-totalTickets :100
-
-action : book_ticket , 99 , holdTicket , cancelTicket
-
-Action is an object which tells what to happen to the state
-
-{
-type:"BOOK_TICKET"
 }
 
-reducerFunction : it is a pure funtion , based on the action , state manipulations will be occurred in the reducer function
+advantages : we can avoid logical functionalities to be written multiple times
 
-const movieTickets={
-totalTickets:100,
-bookedTicktes:20,
-holdedTickets:20
-}
+scenerio : To log the props for the set of components
 
-BOOK_TICKET : State has to change 100-1=99
-HOLD_TICKET :
+React : 18.3
+Future Version 19 version
 
-dispatchFuntion({
-type:BOOK_TICKET
-})
+Memorization :
 
-const state={
-todos:[]
-}
+Memorization is a technique which cache the results of the functions without recalculating when inputs and instances happened , By memorizing we can avoid recalculations
 
-todo :
+1. React.memo() --> react.memo is a hoc provided by the react
+2. useMemo()
+3. useCallback()
 
-1. ADD_TODO
-2. DELETE_TODO
-3. UPDATE_TODO
+Tasks:
 
-Tasks :
-
-1. Class repeat
-2. useReducer - CRUD Operations
-
-topic:
-
-1. UseReducer hook in react
-2. Examples of UseReducer hook
+1. Repeat the class
+2. Try the global counter using useReducer and useContext (https://medium.com/suyeonme/using-usecontext-and-usereducer-together-lets-create-redux-like-global-state-in-react-87470e3ce7fa)
+3. Counter using HOC

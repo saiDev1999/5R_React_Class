@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import { initialState, reducer } from "./jsFunctions";
+import loggingComponent from "../../hoc/logging";
 
 const UseReducerEx2 = () => {
   const [currentState, dispatch] = useReducer(reducer, initialState);
@@ -13,7 +14,7 @@ const UseReducerEx2 = () => {
     <>
       <div>
         <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 mx-3 rounded"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 mx-3 rounded"
           onClick={addTodoFuntion}
         >
           Add Todo
@@ -26,4 +27,4 @@ const UseReducerEx2 = () => {
   );
 };
 
-export default UseReducerEx2;
+export default loggingComponent(UseReducerEx2);

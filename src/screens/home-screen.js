@@ -9,20 +9,26 @@ import UseEffectEx3 from "../components/useEffect/useEffectEx3";
 import { ProfileWrapper } from "../navigation/stack";
 import UseReducer from "../components/useReducer/useReducer";
 import UseReducerEx2 from "../components/useReducer/useReducerEx2";
+import addProfileHoc from "../hoc/profile-hoc";
+import EmployeeScreen from "../components/employeProfile/employee-screen";
 
-function HomeScreen() {
+function HomeScreen(props) {
   const sharedData = useContext(ProfileWrapper);
+  console.log(props, "from Homescreen");
   console.log(sharedData, "sharedData");
   return (
     <div>
-      <Navbar />
-      <UseReducerEx2 />
+      <Navbar darkTheme={true} />
+      <EmployeeScreen />
+      {/* <UseReducerEx2 count={10} />
       <h2>
         welcome to home screen {sharedData.profileInfo.name}{" "}
         {sharedData.profileInfo.salary}
       </h2>
 
-      <h4>{sharedData.counter}</h4>
+      <h2>Good morning {props.data.name}</h2>
+
+      <h4>{sharedData.counter}</h4> */}
 
       {/* <UseEffectEx3 /> */}
       {/* <UseEffectExample2 />
@@ -31,4 +37,4 @@ function HomeScreen() {
   );
 }
 
-export default HomeScreen;
+export default addProfileHoc(HomeScreen);

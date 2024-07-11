@@ -1,8 +1,10 @@
+import React from "react";
 const Heading1 = (prop) => {
-  const { title } = prop;
+  console.log("hiii heading 1 re-rendering....");
+  const { title = "guest" } = prop;
   return <h1>{title}</h1>;
 };
-export default Heading1;
+export default React.memo(Heading1);
 
 export const Heading2 = () => {
   return <h2>Hello world h2</h2>;
