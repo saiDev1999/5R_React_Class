@@ -23,6 +23,8 @@ import CustomToasts from "./components/toasts/toasts.js";
 import RecipeTable from "./components/tables/recipeTable.js";
 import RecipeList from "./components/tables/recipeListing.js";
 import DigitalClock from "./components/digitalClock/digitalClock.js";
+import EvenChecker from "./components/useMemo/evenChecker.js";
+import UseCallbackExample from "./components/useCallback/useCallback.js";
 
 const App = () => {
   const list = [
@@ -39,7 +41,9 @@ const App = () => {
   ];
   return (
     <>
-      <Stack />
+      {/* <Stack /> */}
+      {/* <EvenChecker /> */}
+      <UseCallbackExample />
     </>
   );
 };

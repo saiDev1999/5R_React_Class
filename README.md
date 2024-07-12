@@ -30,3 +30,33 @@ Tasks:
 1. Repeat the class
 2. Try the global counter using useReducer and useContext (https://medium.com/suyeonme/using-usecontext-and-usereducer-together-lets-create-redux-like-global-state-in-react-87470e3ce7fa)
 3. Counter using HOC
+
+useMemo : useMemo is a react funtional component hook , It will memorizes the value returned by the funtion (by caching the result that was returned)
+
+ex:
+
+1milk -> 10 rupeees
+
+Day 1 Milk 5 50 rupees
+Day 2 milk 5 50 rupees
+Day milk 5 50 rupees
+
+ex: counter1, counter 2
+
+counter
+
+const isEven=()=>{
+return counter1%2===0 ?"EVEN":"ODD
+}
+
+usememo syntax : it will accepts 2 args
+
+1. callback function (value returned function tht needs to be memorised)
+2. array (dependecncy)
+
+useCallback : It will memorizes the function , which ultimately prevents re-renders of the child component
+
+useCallback syntax : 2 args
+
+1. callback function (function to be memorised)
+2. array

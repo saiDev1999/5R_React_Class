@@ -1,7 +1,9 @@
 import "./button.css";
 import styles from "./button.module.css";
+import React from "react";
 
 const ButtonComponent = (prop) => {
+  console.log("child re-render....");
   const buttonStyle = { color: "red", backgroundColor: "green" };
 
   const { text = "button", bgColor, onPress, height } = prop;
@@ -14,4 +16,4 @@ const ButtonComponent = (prop) => {
     </button>
   );
 };
-export default ButtonComponent;
+export default React.memo(ButtonComponent);
