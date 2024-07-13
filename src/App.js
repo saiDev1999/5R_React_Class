@@ -6,7 +6,7 @@ import "./index.css";
 import ButtonComponentClass from "./components/class-components/button.js";
 
 import ProductListing from "./components/class-components/productListing/productListing.js";
-import Greeting from "./components/greeting/greeting.js";
+
 import MountingPhase from "./components/class-components/mounting/mounting.js";
 import Unmounting from "./components/class-components/unmounting/unMounting.js";
 import ParentComponent from "./components/class-components/purecomponents/parent.js";
@@ -15,37 +15,47 @@ import UseStateExample from "./components/funtionalHooks/useState/useStateEx.js"
 import TodoComponent from "./components/funtionalHooks/useState/todo.js";
 import Form from "./components/forms/uncontrolled/form.js";
 import ControlledForm from "./components/forms/controlled/controlled.js";
+import { Greeting } from "./components/heading/headings.js";
+import Stack from "./navigation/stack.js";
+import CustomCorousel from "./components/corousel/corousel.js";
+import UserForm from "./components/forms/userForm.js";
+import CustomToasts from "./components/toasts/toasts.js";
+import RecipeTable from "./components/tables/recipeTable.js";
+import RecipeList from "./components/tables/recipeListing.js";
+import DigitalClock from "./components/digitalClock/digitalClock.js";
+import EvenChecker from "./components/useMemo/evenChecker.js";
+import UseCallbackExample from "./components/useCallback/useCallback.js";
+import CounterExample from "./components/counter-example.js";
+import DataFetch from "./components/data-fetch-component.js";
+import UserList from "./components/user-list.js";
+import useInternetStatus from "./components/custom-hooks/use-internet-checker.js";
 
 const App = () => {
-  const isLogin = true;
-
-  const persons = [
+  const isConnected = useInternetStatus();
+  const list = [
     {
-      name: "kiran",
-      dayRouting: [["Woke up at 7am", "breakfast at 9am", "class at 10am"]],
-      breakTime: 10,
+      name: "shirt",
+      text: "designed shirt",
+      url: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
     },
     {
-      name: "ramya",
-      dayRouting: [["Woke up at 8am", "breakfast at 10am", "class at 11am"]],
-      breakTime: 60,
+      name: "samsung",
+      text: "mobile",
+      url: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
     },
   ];
 
-  const names = ["kiran", "sathvik", "mounika", "sashi", "ramya"];
-  const greeting = ["Woke up at 7am", "breakfast at 9am", "class at 10am"];
-
+  if (!isConnected) {
+    return <h3>Internet not avialable</h3>;
+  }
   return (
-    <div>
-      {/* <MountingPhase favColor={"red"} /> */}
-      {/* <ParentComponent /> */}
-      {/* <CircleComponent /> */}
-      {/* <UseStateExample /> */}
-
-      {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
-      {/* <Form /> */}
-      <ControlledForm />
-    </div>
+    <>
+      {/* <Stack /> */}
+      {/* <EvenChecker /> */}
+      {/* <CounterExample /> */}
+      <UserList />
+      <DataFetch />
+    </>
   );
 };
 
