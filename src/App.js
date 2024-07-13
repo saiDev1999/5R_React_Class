@@ -25,8 +25,13 @@ import RecipeList from "./components/tables/recipeListing.js";
 import DigitalClock from "./components/digitalClock/digitalClock.js";
 import EvenChecker from "./components/useMemo/evenChecker.js";
 import UseCallbackExample from "./components/useCallback/useCallback.js";
+import CounterExample from "./components/counter-example.js";
+import DataFetch from "./components/data-fetch-component.js";
+import UserList from "./components/user-list.js";
+import useInternetStatus from "./components/custom-hooks/use-internet-checker.js";
 
 const App = () => {
+  const isConnected = useInternetStatus();
   const list = [
     {
       name: "shirt",
@@ -39,11 +44,17 @@ const App = () => {
       url: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
     },
   ];
+
+  if (!isConnected) {
+    return <h3>Internet not avialable</h3>;
+  }
   return (
     <>
       {/* <Stack /> */}
       {/* <EvenChecker /> */}
-      <UseCallbackExample />
+      {/* <CounterExample /> */}
+      <UserList />
+      <DataFetch />
     </>
   );
 };
