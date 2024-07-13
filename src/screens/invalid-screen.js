@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/navBar/navbar";
 import { useNavigate } from "react-router-dom";
 
 function InvalidScreen() {
