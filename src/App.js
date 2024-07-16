@@ -4,6 +4,7 @@ import "./index.css";
 import useInternetStatus from "./components/custom-hooks/use-internet-checker.js";
 import DataFetch from "./components/data-fetch-component.js";
 import UserList from "./components/user-list.js";
+import CountryListing from "./components/countryApi/countryApi.js";
 
 const App = () => {
   const isConnected = useInternetStatus();
@@ -28,8 +29,9 @@ const App = () => {
       {/* <Stack /> */}
       {/* <EvenChecker /> */}
       {/* <CounterExample /> */}
-      <UserList />
-      <DataFetch />
+      <CountryListing />
+      {/* <UserList />
+      <DataFetch /> */}
     </>
   );
 };
